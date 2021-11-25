@@ -1,0 +1,24 @@
+expressjs+agenda+mongo+sharpjs制作的图片服务器，可在线处理图片并且缓存至服务器，支持height，width，format参数，支持判断浏览器是否支持WEBP，然后返回webp或者jpg。
+
+设置config/config.js:
+```
+module.exports = {
+  dbUrl: "127.0.0.1",
+  db: "imageserver",
+  dbUser: "imageserver",
+  dbPassword: "imageserver",
+  keeptime: 3, //单位分钟 Minutes
+  whiteLists: [
+    'image.querydata.org'
+  ]
+};
+```
+keeptime为文件保留分钟，每次请求会刷新文件的lastseen时间，只有那些lastseen时间超过设置的keeptime的会进行删除！
+
+whiteLists设置仅处理哪些域名的图片，不带协议！若留空数组即[]，则可对任意网站的图片生效！
+
+支持jpg和png的在线处理。
+
+运行之后，访问/api?url=imageurl&width=200&height=300&format=webp，即可看见处理之后图片。
+
+推荐使用format=webp，会根据浏览器是否支持webp来返回webp格式图片或者jpg格式图片。
