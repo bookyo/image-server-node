@@ -19,6 +19,14 @@ whiteLists设置仅处理哪些域名的图片，不带协议！若留空数组�
 
 支持jpg和png的在线处理。
 
+测试链接：
+https://imageserver.querydata.org/api?url=https://image.querydata.org/movie/poster/no-poster.jpg&width=200&format=webp
+
+已经做了白名单，仅用于image.querydata.org中的图片处理。
+
+用于wmdb项目：
+https://github.com/iiiiiii1/douban-imdb-api
+
 运行之后，访问/api?url=imageurl&width=200&height=300&format=webp，即可看见处理之后图片。
 
 format支持webp,jpg和png三个参数，推荐使用format=webp，会根据浏览器是否支持webp来返回webp格式图片或者jpg格式图片。
