@@ -20,7 +20,7 @@ whiteLists设置仅处理哪些域名的图片，不带协议！若留空数组�
 支持jpg和png的在线处理。
 
 测试链接：
-https://imageserver.querydata.org/api?url=https://image.querydata.org/movie/poster/no-poster.jpg&width=200&format=webp
+https://imageserver.querydata.org/api?url=https://wmdb.querydata.org/movie/poster/no-poster.jpg&width=200&format=webp
 
 已经做了白名单，仅用于image.querydata.org中的图片处理。
 
